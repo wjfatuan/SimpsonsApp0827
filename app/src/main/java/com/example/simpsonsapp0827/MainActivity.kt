@@ -20,13 +20,26 @@ class MainActivity : AppCompatActivity() {
         }
         val btnHomer: Button = findViewById(R.id.btnHomer)
         btnHomer.setOnClickListener {
+            changeImage("homer")
+        }
+        val btnBart: Button = findViewById(R.id.btnBart)
+        btnBart.setOnClickListener {
             changeImage("bart")
+        }
+        val btnMarge: Button = findViewById(R.id.btnMarge)
+        btnMarge.setOnClickListener {
+            changeImage("marge")
         }
     }
 
     fun changeImage(name: String) {
         val imgSimpson : ImageView = findViewById(R.id.imgSimpson)
-        imgSimpson.setImageResource(R.drawable.bart)
+        if(name=="homer")
+            imgSimpson.setImageResource(R.drawable.homer)
+        else if(name=="bart")
+            imgSimpson.setImageResource(R.drawable.bart)
+        else if(name=="marge")
+            imgSimpson.setImageResource(R.drawable.marge)
     }
 
 }
