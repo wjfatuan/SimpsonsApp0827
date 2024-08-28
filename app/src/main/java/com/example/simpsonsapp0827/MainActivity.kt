@@ -34,12 +34,11 @@ class MainActivity : AppCompatActivity() {
 
     fun changeImage(name: String) {
         val imgSimpson : ImageView = findViewById(R.id.imgSimpson)
-        if(name=="homer")
-            imgSimpson.setImageResource(R.drawable.homer)
-        else if(name=="bart")
-            imgSimpson.setImageResource(R.drawable.bart)
-        else if(name=="marge")
-            imgSimpson.setImageResource(R.drawable.marge)
+        when (name) {
+            "homer" -> imgSimpson.setImageResource(R.drawable.homer)
+            "bart" -> imgSimpson.setImageResource(R.drawable.bart)
+            else -> imgSimpson.setImageResource(R.drawable.marge)
+        }
     }
 
 }
